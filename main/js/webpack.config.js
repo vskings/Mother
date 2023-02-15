@@ -7,10 +7,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // output folder
     publicPath: '/',
   },
+  devServer: {
+    port: '8080',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    open: true,
+    hot: true,
+    liveReload: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   module: {
     rules: [
       {
-        test: /\.?js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -20,12 +32,22 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           'style-loader',
           'css-loader',
           'postcss-loader', // for styles
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: {
+          loader: 'url-loader',
+        },
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
     ],
   },

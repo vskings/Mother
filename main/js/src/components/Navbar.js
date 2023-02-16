@@ -5,11 +5,11 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <nav
-      className={` h-auto w-full justify-between px-4 flex bg-black opacity-80 backdrop-blur fixed z-20 ${
+      className={` h-[80px] w-full justify-between px-4 flex -mt-20 bg-black opacity-80 backdrop-blur fixed z-20 ${
         darkMode && 'dark'
       }`}
     >
-      <figure>
+      <figure className="flex items-center">
         <img src={logo} alt="brand" />
       </figure>
 

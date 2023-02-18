@@ -12,8 +12,11 @@ import {
   ubisoftBlack,
   kraftonBlack,
 } from '../assets';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Hero = () => {
+  const { theme } = React.useContext(ThemeContext);
+
   return (
     <div className="bg-hero h-auto flex flex-col gap-8 w-full py-4 px-10">
       <h1 className="web-h1 text-grey-500 dark:text-white text-center">
@@ -32,33 +35,55 @@ const Hero = () => {
         </button>
       </div>
 
-      <span className="web-p3 text-grey-500 my-8 mt-12 mx-auto">
+      <span className="web-p3 text-grey-500 dark:text-white my-8 mt-12 mx-auto">
         TRUSTED BY GAMERS AND ORGANIZERS
       </span>
 
-      <figure className="flex justify-center flex-wrap h-auto gap-6 text-black mx-auto mb-10">
-        <img
-          src={fifaBlack}
-          className="h-auto w-auto object-contain"
-          alt="game"
-        />
-        <img
-          src={riotBlack}
-          className="h-auto w-auto object-contain"
-          alt="riot"
-        />
-        <img src={eaBlack} className="h-auto w-auto object-contain" alt="ea" />
-        <img
-          src={ubisoftBlack}
-          className="h-auto w-auto object-contain"
-          alt="ubisoft"
-        />
-        <img
-          src={kraftonBlack}
-          className="h-auto w-auto object-contain"
-          alt="krafton"
-        />
-      </figure>
+      {theme === 'light' ? (
+        <figure className="flex justify-center flex-wrap h-auto gap-6 text-black mx-auto mb-10">
+          <img
+            src={fifaBlack}
+            className="h-auto w-auto object-contain"
+            alt="game"
+          />
+          <img
+            src={riotBlack}
+            className="h-auto w-auto object-contain"
+            alt="riot"
+          />
+          <img
+            src={eaBlack}
+            className="h-auto w-auto object-contain"
+            alt="ea"
+          />
+          <img
+            src={ubisoftBlack}
+            className="h-auto w-auto object-contain"
+            alt="ubisoft"
+          />
+          <img
+            src={kraftonBlack}
+            className="h-auto w-auto object-contain"
+            alt="krafton"
+          />
+        </figure>
+      ) : (
+        <figure className="flex justify-center flex-wrap h-auto gap-6 text-black mx-auto mb-10">
+          <img src={fifa} className="h-auto w-auto object-contain" alt="game" />
+          <img src={riot} className="h-auto w-auto object-contain" alt="riot" />
+          <img src={ea} className="h-auto w-auto object-contain" alt="ea" />
+          <img
+            src={ubisoft}
+            className="h-auto w-auto object-contain"
+            alt="ubisoft"
+          />
+          <img
+            src={krafton}
+            className="h-auto w-auto object-contain"
+            alt="krafton"
+          />
+        </figure>
+      )}
     </div>
   );
 };

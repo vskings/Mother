@@ -15,8 +15,8 @@ const GameCard = ({ image, title, deadline, price, link }) => {
           </span>
         </div>
         <div className="flex flex-col justify-start gap-1">
-          <h4 className="web-p3">{title}</h4>
-          <p className="web-sub2">{deadline}</p>
+          <h4 className="web-p3 text-grey-500 dark:text-white">{title}</h4>
+          <p className="web-sub2 text-grey-500 dark:text-white">{deadline}</p>
         </div>
         <div className="flex justify-between items-center">
           <a
@@ -26,7 +26,9 @@ const GameCard = ({ image, title, deadline, price, link }) => {
             View Details
           </a>
           <div className="flex flex-col">
-            <span className="web-sub3">Tournament Price</span>
+            <span className="web-sub3 text-grey-500 dark:text-white">
+              Tournament Price
+            </span>
             <p className="web-p4 text-secondary2-500 text-right">${price}</p>
           </div>
         </div>

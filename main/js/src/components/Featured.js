@@ -5,7 +5,7 @@ import Title from './title';
 
 const Featured = () => {
   return (
-    <div className="flex flex-col mx-auto ">
+    <div className="flex flex-col mx-auto mb-[2em] ">
       <Title
         heading={'Featured Tournaments'}
         text={'View all tournaments'}

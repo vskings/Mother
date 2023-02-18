@@ -13,7 +13,7 @@ const Homepage = () => {
       <div className="px-[2em] mt-20">
         <Hero />
         <Featured />
-        <figure className="my-8">
+        <figure className="my-[4em]">
           <img src={banner} alt="" />
         </figure>
         <div className="flex flex-col mx-auto ">
@@ -35,10 +35,10 @@ const Homepage = () => {
               <img src={avatar1} alt="" />
             </div>
             <figcaption className="flex flex-col gap-4 items-center justify-center">
-              <h3 className="web-h3">
+              <h3 className="web-h3 text-grey-500 dark:text-white">
                 Organize and host tournaments in top-played games
               </h3>
-              <p className="web-sub1">
+              <p className="web-sub1 text-grey-500 dark:text-white">
                 Connect with other gamers and discover tournaments organized by
                 the best, or organize your own.
               </p>
@@ -46,10 +46,10 @@ const Homepage = () => {
           </figure>
           <figure className="grid grid-cols-1 sm:grid-cols-2">
             <figcaption className="flex flex-col gap-4 items-center justify-center">
-              <h3 className="web-h3">
+              <h3 className="web-h3 text-grey-500 dark:text-white">
                 Organize and host tournaments in top-played games
               </h3>
-              <p className="web-sub1">
+              <p className="web-sub1 text-grey-500 dark:text-white">
                 Connect with other gamers and discover tournaments organized by
                 the best, or organize your own.
               </p>
@@ -63,10 +63,10 @@ const Homepage = () => {
               <img src={avatar3} alt="" />
             </div>
             <figcaption className="flex flex-col gap-4 items-center justify-center">
-              <h3 className="web-h3">
+              <h3 className="web-h3 text-grey-500 dark:text-white">
                 Organize and host tournaments in top-played games
               </h3>
-              <p className="web-sub1">
+              <p className="web-sub1 text-grey-500 dark:text-white">
                 Connect with other gamers and discover tournaments organized by
                 the best, or organize your own.
               </p>

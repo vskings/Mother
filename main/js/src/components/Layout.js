@@ -4,13 +4,13 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="dark:bg-black">
       <Navbar />
 
       <div className="relative">{children}</div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

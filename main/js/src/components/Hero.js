@@ -18,7 +18,7 @@ const Hero = () => {
   const { theme } = React.useContext(ThemeContext);
 
   return (
-    <div className="bg-hero h-auto flex flex-col gap-8 w-full py-4 px-4 md:px-10">
+    <header className="bg-hero h-auto flex flex-col gap-8 w-full py-4 px-4 md:px-10">
       <h1 className="md:web-h1 text-grey-500 dark:text-white text-center">
         Dominate the esports space with us
       </h1>
@@ -84,7 +84,7 @@ const Hero = () => {
           />
         </figure>
       )}
-    </div>
+    </header>
   );
 };
 

@@ -34,7 +34,7 @@ const Modalform = () => {
               <h3 className="text-black text-webp2 font-semibold font-poppins mx-auto dark:text-white">
                 Forgot your password
               </h3>
-              <caption className="text-black web-sub2 dark:text-grey-300">
+              <caption className="text-black web-sub2 dark:text-grey-300 px-4">
                 Please, enter the email address associated with your account
               </caption>
             </div>

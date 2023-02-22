@@ -18,15 +18,15 @@ const Hero = () => {
   const { theme } = React.useContext(ThemeContext);
 
   return (
-    <div className="bg-hero h-auto flex flex-col gap-8 w-full py-4 px-10">
-      <h1 className="web-h1 text-grey-500 dark:text-white text-center">
+    <div className="bg-hero h-auto flex flex-col gap-8 w-full py-4 px-4 md:px-10">
+      <h1 className="md:web-h1 text-grey-500 dark:text-white text-center">
         Dominate the esports space with us
       </h1>
       <p className="web-p2 text-grey-500 dark:text-white text-center">
         Play and host tournaments, place bets, and compete in head-to-head games
       </p>
 
-      <div className="flex gap-8 justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
         <button className="bg-secondary2-500 text-white border border-secondary2-500 px-8 py-2 rounded-full web-p2">
           Create tournaments
         </button>
@@ -35,9 +35,9 @@ const Hero = () => {
         </button>
       </div>
 
-      <span className="web-p3 text-grey-500 dark:text-white my-8 mt-12 mx-auto">
+      <caption className="web-p3 text-grey-500 dark:text-white my-8 mt-12 flex mx-auto">
         TRUSTED BY GAMERS AND ORGANIZERS
-      </span>
+      </caption>
 
       {theme === 'light' ? (
         <figure className="flex justify-center flex-wrap h-auto gap-6 text-black mx-auto mb-10">

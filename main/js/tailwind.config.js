@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        black: '#0B0E13',
         primary: {
           50: '#e6f0eb',
           100: '#b2d1c1',
@@ -79,6 +80,10 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/src/assets/Hero.png')",
+      },
+      fontFamily: {
+        array: ['Array'],
+        poppins: ['Poppins'],
       },
       fontSize: {
         webH1: '100px',

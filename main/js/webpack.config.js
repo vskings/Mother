@@ -4,13 +4,13 @@ module.exports = {
   mode: 'development',
   entry: '/src/index.js', // main js
   output: {
-    path: path.resolve(__dirname, 'dist'), // output folder
+    path: path.resolve(__dirname, 'build'), // output folder
     publicPath: '/',
   },
   devServer: {
     port: '8080',
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'build'),
     },
     open: true,
     hot: true,
@@ -53,7 +53,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // base html
+      template: './public/index.html', // base html
     }),
   ],
 };

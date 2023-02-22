@@ -1,11 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
     <div className="App">
-      <h1 className="text-primary">Vskings</h1>
+      <Homepage />
     </div>
   );
 };
-
 export default App;

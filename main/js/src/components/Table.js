@@ -2,8 +2,8 @@ import React from 'react';
 
 const Table = () => {
   return (
-    <div className=" w-full py-4 px-6 mx-auto overflow-x-auto mb-12 rounded-md border border-secondary2-500">
-      <table className="table-auto w-full">
+    <div className=" w-full py-4 px-6 mx-auto mb-12 rounded-md border overflow-x-auto border-secondary2-500">
+      <table className="table-auto w-full overflow-x-auto">
         <thead className=" border-b-2 ">
           <tr>
             <th className="text-left py-4 web-sub1 text-grey-500 dark:text-white">

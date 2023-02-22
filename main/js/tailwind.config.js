@@ -79,7 +79,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        hero: "url('/src/assets/Hero.png')",
+        hero: "linear-gradient(to  bottom, rgba('#7ed56f',0.8), rgba('#28b485',0.8)), url('https://i.ibb.co/72CKd79/Hero.png')",
       },
       fontFamily: {
         array: ['Array'],

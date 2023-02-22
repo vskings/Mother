@@ -11,8 +11,6 @@ const Layout = ({ children }) => {
     <div className="dark:bg-black relative">
       <Navbar />
 
-      {navbar ? <MobileMenu /> : ''}
-
       <div className="relative">{children}</div>
 
       <Footer />

@@ -3,15 +3,13 @@ import { logo } from '../assets';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import DarkModeToggle from './DarkmodeToggle';
 import { AuthContext } from '../context/AuthContext';
+import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
   const { setModalIsOpen, navbar, setNavbar } = useContext(AuthContext);
 
   return (
-    <nav
-      className="h-[80px] w-full  justify-between px-4 flex  bg-black opacity-90 sticky backdrop-blur      
-    "
-    >
+    <nav className="h-[80px] w-full  justify-between px-4 flex z-20 bg-black bg-opacity-75 fixed backdrop-blur">
       <figure className="flex items-center">
         <img src={logo} alt="brand" />
       </figure>
@@ -48,6 +46,8 @@ const Navbar = () => {
           <GiHamburgerMenu size={32} />
         </button>
       </div>
+
+      {navbar ? <MobileMenu /> : ''}
     </nav>
   );
 };

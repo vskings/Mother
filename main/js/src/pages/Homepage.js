@@ -19,11 +19,11 @@ const Homepage = () => {
         <figure className="my-[4em] px-[2em]">
           <img src={banner} alt="" />
         </figure>
-        <div className="flex flex-col mx-auto px-[2em]">
+        <div className="flex flex-col mx-auto px-[2em] overflow-x-auto">
           <Title heading={'Latest Bets'} text={'View all bets'} link={'/'} />
           <Table />
         </div>
-        <div className="flex flex-col mx-auto px-[2em]">
+        <div className="flex flex-col mx-auto px-[2em] overflow-x-auto">
           <Title
             heading={'Open H2H Challenges'}
             text={'View all H2H Challenges'}

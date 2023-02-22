@@ -3,39 +3,57 @@ import { GrFormClose } from 'react-icons/gr';
 import { AuthContext } from '../context/AuthContext';
 
 const MobileMenu = () => {
-  const { navbar, setNavbar } = useContext(AuthContext);
+  const { setModalIsOpen, navbar, setNavbar } = useContext(AuthContext);
+
+  function login() {
+    setNavbar(false);
+    setModalIsOpen(true);
+  }
 
   return (
     <div
-      className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-        navbar ? 'block' : 'hidden'
+      className={`flex-col h-auto z-50 absolute top-0 right-0 space-y-8 bg-white dark:bg-black ${
+        navbar ? 'flex pl-4 pb-4 w-3/5' : 'hidden'
       }`}
     >
       <div className="flex justify-end">
         <button
-          className="flex mt-4 mr-4 float-right"
+          className="flex mt-2 mr-1 float-right"
           onClick={() => setNavbar(false)}
         >
           <GrFormClose
-            size={25}
+            size={30}
             className="stroke-black dark:stroke-grey-200"
           />
         </button>
       </div>
-      <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-        <li className="text-gray-600 hover:text-blue-600">
-          <a href="javascript:void(0)">Home</a>
+      <ul className="items-center justify-center space-y-10 mb-[2em]">
+        <li className="text-grey-500 dark:text-grey-300 hover:text-secondary2-500 hover:dark:text-secondary2-500 capitalize font-semibold font-poppins text-sm">
+          <a href="javascript:void(0)" onClick={() => setNavbar(false)}>
+            Tournaments
+          </a>
         </li>
-        <li className="text-gray-600 hover:text-blue-600">
-          <a href="javascript:void(0)">Blog</a>
+        <li className="text-grey-500 dark:text-grey-300 hover:text-secondary2-500 hover:dark:text-secondary2-500 capitalize font-semibold font-poppins text-sm">
+          <a href="javascript:void(0)" onClick={() => setNavbar(false)}>
+            Betting
+          </a>
         </li>
-        <li className="text-gray-600 hover:text-blue-600">
-          <a href="javascript:void(0)">About US</a>
-        </li>
-        <li className="text-gray-600 hover:text-blue-600">
-          <a href="javascript:void(0)">Contact US</a>
+        <li className="text-grey-500 dark:text-grey-300 hover:text-secondary2-500 hover:dark:text-secondary2-500 capitalize font-semibold font-poppins text-sm">
+          <a href="javascript:void(0)" onClick={() => setNavbar(false)}>
+            Head-to-head
+          </a>
         </li>
       </ul>
+      <div>
+        <button
+          data-modal-target="authentication-modal"
+          data-modal-toggle="authentication-modal"
+          onClick={login}
+          className="bg-secondary2-500 dark:bg-white flex text-white dark:text-grey-800 py-[8px] px-[30px] web-p4 rounded-[40px] border"
+        >
+          Login
+        </button>
+      </div>
     </div>
   );
 };

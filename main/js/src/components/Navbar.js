@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { logo } from '../assets';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import DarkModeToggle from './DarkmodeToggle';
 import { AuthContext } from '../context/AuthContext';
 
 const Navbar = () => {
-  const { setModalIsOpen } = useContext(AuthContext);
+  const { setModalIsOpen, navbar, setNavbar } = useContext(AuthContext);
 
   return (
     <nav
@@ -34,9 +35,17 @@ const Navbar = () => {
           data-modal-target="authentication-modal"
           data-modal-toggle="authentication-modal"
           onClick={() => setModalIsOpen(true)}
-          className="bg-white text-grey-800 py-[8px] px-[30px] web-p4 rounded-[40px] border"
+          className="bg-white hidden md:flex text-grey-800 py-[8px] px-[30px] web-p4 rounded-[40px] border"
         >
           Login
+        </button>
+
+        <button
+          type="button"
+          className="flex md:hidden text-white"
+          onClick={() => setNavbar(!navbar)}
+        >
+          <GiHamburgerMenu size={32} />
         </button>
       </div>
     </nav>

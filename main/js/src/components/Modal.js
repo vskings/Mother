@@ -67,7 +67,7 @@ const Modalform = () => {
               />
             </div>
           </div>
-          <div className="gap-y-1 flex flex-col">
+          <div className="gap-y-1 flex mb-1 flex-col">
             <div className="flex w-full items-center">
               <span className="text-black dark:text-grey-300 font-poppins text-xs font-medium leading-[113.5%]">
                 Password
@@ -83,11 +83,9 @@ const Modalform = () => {
               />
             </div>
           </div>
-          <div className="gap-y-1 flex flex-col">
-            <div className="flex w-full items-center">
-              <span className="text-black dark:text-grey-300 font-poppins text-xs font-medium leading-[113.5%]">
-                Country (optional)
-              </span>
+          <div className="gap-y-2 flex flex-col">
+            <div className="flex w-full items-center text-black dark:text-grey-300 font-poppins text-xs font-medium leading-[113.5%]">
+              Country (optional)
             </div>
             <div className="flex items-center border border-secondary2-500 rounded-md p-4">
               <input
@@ -99,7 +97,7 @@ const Modalform = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  w-full">
+          <div className="flex flex-col my-4  w-full">
             <div className="flex justify-start items-center gap-x-4 w-full">
               <div className="flex items-center">
                 <input
@@ -108,7 +106,7 @@ const Modalform = () => {
                   required
                 />
               </div>
-              <div className="ml-2 text-grey-500 dark:text-white text-xs font-normal font-poppins">
+              <div className="ml-2 text-grey-500 dark:text-white text-[10px] font-normal font-poppins">
                 I agree to the&nbsp;
                 <span className="text-secondary2-500">
                   terms & conditions, privacy policy

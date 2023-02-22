@@ -18,11 +18,11 @@ const Hero = () => {
   const { theme } = React.useContext(ThemeContext);
 
   return (
-    <header className="bg-hero h-auto flex flex-col gap-8 w-full py-4 px-4 md:px-10">
-      <h1 className="md:web-h1 text-grey-500 dark:text-white text-center">
+    <div className="bg-hero h-full flex flex-col gap-y-8 w-full py-4 px-4 md:px-10">
+      <h1 className="text-4xl md:text-[80px] leading-[113.5%] font-array font-semibold text-grey-500 dark:text-white text-center">
         Dominate the esports space with us
       </h1>
-      <p className="web-p2 text-grey-500 dark:text-white text-center">
+      <p className="text-lg md:text-[20px] leading-[142.5%] font-array font-semibold text-grey-500 dark:text-white text-center">
         Play and host tournaments, place bets, and compete in head-to-head games
       </p>
 
@@ -84,7 +84,7 @@ const Hero = () => {
           />
         </figure>
       )}
-    </header>
+    </div>
   );
 };
 

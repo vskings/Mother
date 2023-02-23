@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <div className=" bg-[url('https://i.ibb.co/72CKd79/Hero.png')] bg-cover bg-center ">
-      <div className="bg-gradient-to-b from-transparent to-white dark:to-black h-auto flex flex-col gap-y-8 w-full  pb-4 px-4 md:px-10">
+      <div className="bg-gradient-to-b from-transparent to-white dark:to-black h-auto flex flex-col gap-y-8 w-full pt-[100px] pb-4 px-4 md:px-10">
         <h1 className="text-4xl md:text-[80px] leading-[113.5%] font-array font-semibold text-grey-500 dark:text-white text-center">
           Dominate the esports space with us
         </h1>

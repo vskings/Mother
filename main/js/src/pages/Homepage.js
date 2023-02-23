@@ -80,7 +80,6 @@ const Homepage = () => {
             </figcaption>
           </figure>
         </div>
-        <Modalform />
       </Layout>
     </div>
   );

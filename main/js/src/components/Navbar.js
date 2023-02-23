@@ -8,10 +8,9 @@ import MobileMenu from './MobileMenu';
 const Navbar = () => {
   const { setModalIsOpen, navbar, setNavbar } = useContext(AuthContext);
 
-
   return (
     <nav
-      className="h-[60px] w-full  justify-between px-4 flex sticky bg-black
+      className="h-[80px] w-full  justify-between px-4 flex sticky z-20 bg-black
         bg-opacity-100"
     >
       <figure className="flex items-center">

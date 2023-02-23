@@ -2,7 +2,7 @@
   "name": "vskings",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://vskings.com",
+  "homepage": "http://vskings.com",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",

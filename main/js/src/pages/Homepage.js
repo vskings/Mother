@@ -5,8 +5,8 @@ import Featured from '../components/Featured';
 import Layout from '../components/Layout';
 import { avatar1, avatar2, avatar3, banner } from '../assets';
 import Table from '../components/Table';
-import Title from '../components/title';
 import Modalform from '../components/Modal';
+import TitleHeader from '../components/TitleHeader';
 
 const Homepage = () => {
   return (
@@ -20,11 +20,15 @@ const Homepage = () => {
           <img src={banner} alt="" />
         </figure>
         <div className="flex flex-col mx-auto px-[2em] overflow-x-auto">
-          <Title heading={'Latest Bets'} text={'View all bets'} link={'/'} />
+          <TitleHeader
+            heading={'Latest Bets'}
+            text={'View all bets'}
+            link={'/'}
+          />
           <Table />
         </div>
         <div className="flex flex-col mx-auto px-[2em] overflow-x-auto">
-          <Title
+          <TitleHeader
             heading={'Open H2H Challenges'}
             text={'View all H2H Challenges'}
             link={'/'}
@@ -32,7 +36,7 @@ const Homepage = () => {
           <Table />
         </div>
         <div className="flex flex-col mx-auto my-10 px-[2em]">
-          <Title heading={'Why Choose Us'} />
+          <TitleHeader heading={'Why Choose Us'} />
           <figure className="grid grid-cols-1 sm:grid-cols-2">
             <div className="-ml-[2em]">
               <img src={avatar1} alt="" />
@@ -76,7 +80,6 @@ const Homepage = () => {
             </figcaption>
           </figure>
         </div>
-        <Modalform />
       </Layout>
     </div>
   );

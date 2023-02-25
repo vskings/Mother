@@ -1,12 +1,12 @@
 import React from 'react';
 import GameCard from './GameCard';
 import { featured } from '../utils/data';
-import Title from './title';
+import TitleHeader from './TitleHeader';
 
 const Featured = () => {
   return (
     <div className="flex flex-col mx-auto mb-[2em] ">
-      <Title
+      <TitleHeader
         heading={'Featured Tournaments'}
         text={'View all tournaments'}
         link={'/'}

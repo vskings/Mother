@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/vskings/public_html/
+    - /dist/cp index.html $DEPLOYPATH
+    - /dist/cp main.js $DEPLOYPATH

@@ -9,7 +9,10 @@ const Navbar = () => {
   const { setModalIsOpen, navbar, setNavbar } = useContext(AuthContext);
 
   return (
-    <nav className="h-[80px] w-full  justify-between px-4 flex z-20 bg-black bg-opacity-75 fixed backdrop-blur">
+    <nav
+      className="h-[80px] w-full  justify-between px-4 flex sticky z-20 bg-black
+        bg-opacity-100"
+    >
       <figure className="flex items-center">
         <img src={logo} alt="brand" />
       </figure>

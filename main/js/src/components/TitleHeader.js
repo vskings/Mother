@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Title = ({ heading, link, text }) => {
+const TitleHeader = ({ heading, link, text }) => {
   return (
     <>
       <h2 className="web-h2 text-secondary2-500 text-center mx-auto my-8 border-t-[8px] border-secondary2-500 w-fit py-4">
@@ -15,4 +15,4 @@ const Title = ({ heading, link, text }) => {
   );
 };
 
-export default Title;
+export default TitleHeader;

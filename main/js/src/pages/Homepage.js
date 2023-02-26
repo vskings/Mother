@@ -3,10 +3,17 @@ import '../index.css';
 import Hero from '../components/Hero';
 import Featured from '../components/Featured';
 import Layout from '../components/Layout';
-import { avatar1, avatar2, avatar3, banner } from '../assets';
+import { avatar1, avatar2, avatar3, banner, banner2 } from '../assets';
 import Table from '../components/Table';
-import Modalform from '../components/Modal';
 import TitleHeader from '../components/TitleHeader';
+
+import {
+  latestGames,
+  challenges,
+  challengeHeaders,
+  latestHeaders,
+} from '../utils/data';
+import TableCard from '../components/TableCard';
 
 const Homepage = () => {
   return (
@@ -25,7 +32,12 @@ const Homepage = () => {
             text={'View all bets'}
             link={'/'}
           />
-          <Table />
+          <Table
+            headers={latestHeaders}
+            latest={latestGames}
+            className="hidden md:flex"
+          />
+          <TableCard latest={latestGames} className="flex md:hidden" />
         </div>
         <div className="flex flex-col mx-auto px-[2em] overflow-x-auto">
           <TitleHeader
@@ -33,32 +45,37 @@ const Homepage = () => {
             text={'View all H2H Challenges'}
             link={'/'}
           />
-          <Table />
+          <Table
+            headers={challengeHeaders}
+            challenges={challenges}
+            className="hidden md:flex"
+          />
+          <TableCard challenges={challenges} className="flex md:hidden" />
         </div>
-        <div className="flex flex-col mx-auto my-10 px-[2em]">
+        <div className="flex flex-col mx-auto  gap-y-6 my-10 px-[2em]">
           <TitleHeader heading={'Why Choose Us'} />
           <figure className="grid grid-cols-1 sm:grid-cols-2">
             <div className="-ml-[2em]">
               <img src={avatar1} alt="" />
             </div>
             <figcaption className="flex flex-col gap-4 items-center justify-center">
-              <h3 className="web-h3 text-grey-500 dark:text-white">
+              <h3 className="font-semibold text-lg md:text-2xl font-poppins text-grey-500 dark:text-white">
                 Organize and host tournaments in top-played games
               </h3>
-              <p className="web-sub1 text-grey-500 dark:text-white">
+              <p className="font-normal text-sm md:text-lg font-poppins text-grey-500 dark:text-grey-200">
                 Connect with other gamers and discover tournaments organized by
                 the best, or organize your own.
               </p>
             </figcaption>
           </figure>
           <figure className="grid grid-cols-1 sm:grid-cols-2">
-            <figcaption className="flex order-last md:order-first flex-col gap-4 items-center justify-center">
-              <h3 className="web-h3 text-grey-500 dark:text-white">
-                Organize and host tournaments in top-played games
+            <figcaption className="flex order-last md:order-first flex-col gap-4 items-center justify-start md:justify-center">
+              <h3 className="font-semibold text-lg md:text-2xl font-poppins text-grey-500 dark:text-white">
+                Place bets on tournaments
               </h3>
-              <p className="web-sub1 text-grey-500 dark:text-white">
-                Connect with other gamers and discover tournaments organized by
-                the best, or organize your own.
+              <p className="font-normal text-sm md:text-lg font-poppins text-grey-500 dark:text-grey-200">
+                Create betting odds for your tournaments or place bets on
+                ongoing tournaments
               </p>
             </figcaption>
             <div className="-mr-[2em]">
@@ -70,16 +87,19 @@ const Homepage = () => {
               <img src={avatar3} alt="" />
             </div>
             <figcaption className="flex flex-col gap-4 items-center justify-center">
-              <h3 className="web-h3 text-grey-500 dark:text-white">
-                Organize and host tournaments in top-played games
+              <h3 className="font-semibold text-lg md:text-2xl font-poppins text-grey-500 dark:text-white">
+                Create a challenge or accept one with H2H
               </h3>
-              <p className="web-sub1 text-grey-500 dark:text-white">
-                Connect with other gamers and discover tournaments organized by
-                the best, or organize your own.
+              <p className="font-normal text-sm md:text-lg font-poppins text-grey-500 dark:text-grey-200">
+                Take on challenges and win cash wagers playing your favorite
+                games
               </p>
             </figcaption>
           </figure>
         </div>
+        <figure className="my-[4em] flex justify-center w-full px-[2em]">
+          <img src={banner2} alt="" />
+        </figure>
       </Layout>
     </div>
   );

@@ -1,6 +1,7 @@
 import hero from './Hero.png';
 import logo from './logo.png';
 import banner from './banner.png';
+import banner2 from './banner2.png';
 import fifa from './fifa.png';
 import krafton from './krafton.png';
 import riot from './riot.png';
@@ -29,6 +30,7 @@ import avatar3 from './avatar3.png';
 export {
   logo,
   banner,
+  banner2,
   hero,
   ea,
   fifa,

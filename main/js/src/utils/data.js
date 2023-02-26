@@ -75,3 +75,116 @@ export const featured = [
     image: overwatch,
   },
 ];
+
+export const latestGames = [
+  {
+    id: 1,
+    game: 'call of duty',
+    player1: 'Gameboy',
+    player2: 'Lord123',
+    date: 'jan 25, 2023',
+    condition: 'who will win?',
+    openBets: 10,
+  },
+  {
+    id: 2,
+    game: 'League of Legends',
+    player1: 'Gameboy',
+    player2: 'Lord123',
+    date: 'jan 25, 2023',
+    condition: 'who will win?',
+    openBets: 25,
+  },
+  {
+    id: 3,
+    game: 'Dota 2',
+    player1: 'Gameboy',
+    player2: 'Lord123',
+    date: 'jan 25, 2023',
+    condition: 'who will win?',
+    openBets: 10,
+  },
+  {
+    id: 4,
+    game: 'FIFA 2023',
+    player1: 'Gameboy',
+    player2: 'Lord123',
+    date: 'jan 25, 2023',
+    condition: 'who will win?',
+    openBets: 5,
+  },
+  {
+    id: 5,
+    game: 'Overwatch 2',
+    player1: 'Gameboy',
+    player2: 'Lord123',
+    date: 'jan 25, 2023',
+    condition: 'who will win?',
+    openBets: 4,
+  },
+];
+
+export const challenges = [
+  {
+    id: 1,
+    game: 'call of duty',
+    player: '@Gameboy',
+    stake: 200,
+    condition: 'best 2/3',
+    completionRate: 95,
+    platform: 'Xbox series',
+  },
+  {
+    id: 2,
+    game: 'League of Legends',
+    player: '@Gameboy',
+    stake: 200,
+    condition: 'best 3/5',
+    completionRate: 95,
+    platform: 'PC',
+  },
+  {
+    id: 3,
+    game: 'Dota 2',
+    player: '@Gameboy',
+    stake: 200,
+    condition: 'best 2/3',
+    completionRate: 95,
+    platform: 'Playstation 5',
+  },
+  {
+    id: 4,
+    game: 'FIFA 2023',
+    player: '@Gameboy',
+    stake: 200,
+    condition: 'best 2/3',
+    completionRate: 95,
+    platform: 'Playstation 4',
+  },
+  {
+    id: 5,
+    game: 'Overwatch 2',
+    player: '@Gameboy',
+    stake: 200,
+    condition: 'best 2/3',
+    completionRate: 95,
+    platform: 'Xbox One',
+  },
+];
+
+export const latestHeaders = [
+  'Game',
+  'Match',
+  'Match date',
+  'Condition',
+  'Open bet',
+];
+
+export const challengeHeaders = [
+  'Game',
+  'Player',
+  'Stake',
+  'Condition',
+  'Completion rate',
+  'Platform',
+];

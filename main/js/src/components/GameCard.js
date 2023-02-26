@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 const GameCard = ({ image, title, deadline, price, link }) => {
+  const { setModalIsOpen } = useContext(AuthContext);
+
   return (
     <figure className="w-fit ">
       <img
@@ -19,12 +22,12 @@ const GameCard = ({ image, title, deadline, price, link }) => {
           <p className="web-sub2 text-grey-500 dark:text-white">{deadline}</p>
         </div>
         <div className="flex justify-between items-center">
-          <a
-            href="/"
-            className=" text-white web-sub1 bg-secondary2-500 trapezoid rounded-md py-2 px-4"
+          <button
+            onClick={() => setModalIsOpen(true)}
+            className=" text-white border-none web-sub1 bg-secondary2-500 trapezoid rounded-md py-2 px-4"
           >
             View Details
-          </a>
+          </button>
           <div className="flex flex-col">
             <span className="web-sub3 text-grey-500 dark:text-white">
               Tournament Price

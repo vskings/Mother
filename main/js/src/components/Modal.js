@@ -17,6 +17,7 @@ const Modalform = () => {
   return (
     <Modal
       isOpen={modalIsOpen}
+      style={{ overlay: { zIndex: 10000 } }}
       className="bg-black bg-opacity-70 backdrop-blur-xs flex justify-center items-center h-full"
     >
       <div className="relative z-50  w-full h-auto min-h-4/5 max-w-xs md:min-h-4/5 bg-white rounded-lg shadow dark:bg-black ">

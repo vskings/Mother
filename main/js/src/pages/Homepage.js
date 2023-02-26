@@ -5,8 +5,15 @@ import Featured from '../components/Featured';
 import Layout from '../components/Layout';
 import { avatar1, avatar2, avatar3, banner } from '../assets';
 import Table from '../components/Table';
-import Modalform from '../components/Modal';
 import TitleHeader from '../components/TitleHeader';
+
+import {
+  latestGames,
+  challenges,
+  challengeHeaders,
+  latestHeaders,
+} from '../utils/data';
+import TableCard from '../components/TableCard';
 
 const Homepage = () => {
   return (
@@ -25,7 +32,12 @@ const Homepage = () => {
             text={'View all bets'}
             link={'/'}
           />
-          <Table />
+          <Table
+            headers={latestHeaders}
+            latest={latestGames}
+            className="hidden md:flex"
+          />
+          <TableCard latest={latestGames} className="flex md:hidden" />
         </div>
         <div className="flex flex-col mx-auto px-[2em] overflow-x-auto">
           <TitleHeader
@@ -33,7 +45,12 @@ const Homepage = () => {
             text={'View all H2H Challenges'}
             link={'/'}
           />
-          <Table />
+          <Table
+            headers={challengeHeaders}
+            challenges={challenges}
+            className="hidden md:flex"
+          />
+          <TableCard challenges={challenges} className="flex md:hidden" />
         </div>
         <div className="flex flex-col mx-auto my-10 px-[2em]">
           <TitleHeader heading={'Why Choose Us'} />

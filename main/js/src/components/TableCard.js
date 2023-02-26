@@ -7,7 +7,7 @@ const TableCard = ({ latest, challenges }) => {
         ? latest.map((item) => (
             <div
               key={item.id}
-              className="min-h-fit min-w-[300px] backdrop-blur-sm gap-y-4 h-auto py-6 px-4 border-2 border-solid border-secondary2-500 grid rounded-md"
+              className="min-h-fit min-w-[300px] backdrop-blur gap-y-4 h-auto py-6 px-4 border-2 border-solid border-secondary2-500 grid rounded-md"
             >
               <p className="text-grey-300 font-poppins font-medium leading-[19.95px] text-sm">
                 Game
@@ -71,7 +71,7 @@ const TableCard = ({ latest, challenges }) => {
         ? challenges.map((item) => (
             <div
               key={item.id}
-              className="min-h-fit min-w-[300px]  backdrop-blur-sm gap-y-4 h-auto py-6 px-4 border-2 border-solid border-secondary2-500 grid rounded-md"
+              className="min-h-fit min-w-[300px]  backdrop-blur gap-y-4 h-auto py-6 px-4 border-2 border-solid border-secondary2-500 grid rounded-md"
             >
               <p className="text-grey-300  font-poppins font-medium leading-[19.95px] text-sm">
                 Game
